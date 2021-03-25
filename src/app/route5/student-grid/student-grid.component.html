@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <ng-container *ngFor="let header of keys">
+            <th (click)="sort(header)">{{header}} <span *ngIf="sortBy == header">{{sortDir}}</span></th>
+        </ng-container>
+    </tr>
+    <ng-container *ngFor="let item of marks">
+        <tr>
+            <ng-container *ngFor="let header of keys">
+                <td>{{item[header]}}</td>
+            </ng-container>
+        </tr>
+    </ng-container>
+</table>

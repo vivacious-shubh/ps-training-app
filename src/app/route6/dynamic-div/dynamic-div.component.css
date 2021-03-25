@@ -1,0 +1,10 @@
+.dynamic-div {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+}
+.box-container {
+    height: 80%;
+    overflow-y: auto;
+}

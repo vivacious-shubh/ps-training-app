@@ -1,0 +1,19 @@
+<div class="timer-container">
+    <div>
+        <app-first [timerValue]="timerValue"></app-first>
+    </div>
+    <div>
+        <app-second
+            (logEvent)="onEventLogged($event)"
+            (startedEvent)="onStart($event)"
+            (pausedEvent)="onPause($event)"
+            (timerVal)="onCountdownChange($event)">
+        </app-second>
+    </div>
+    <div>
+        <app-third [loggedEvents]="loggedEvents"></app-third>
+    </div>
+    <div>
+        <app-fourth [startCount]="startCount" [pausedCount]="pausedCount"></app-fourth>
+    </div>
+</div>

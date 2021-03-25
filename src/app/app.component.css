@@ -1,0 +1,15 @@
+.side-content {
+    position: fixed;
+    width: 200px;
+    left: 0;
+    top: 0;
+}
+
+.main-content {
+    position: fixed;
+    left: 200px;
+    top: 0;
+    height: 100%;
+    width: calc(100% - 200px);
+    overflow-y: auto;
+}

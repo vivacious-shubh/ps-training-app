@@ -1,0 +1,71 @@
+.container {
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-animation {
+    -webkit-animation-name: rotateOnY;
+    -webkit-animation-duration: 5000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name: rotateOnY;
+    -moz-animation-duration: 5000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+
+    -ms-animation-name: rotateOnY;
+    -ms-animation-duration: 5000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: rotateOnY;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotateOnY {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+@-moz-keyframes rotateOnY {
+    from {
+        -moz-transform: rotateY(0deg);
+    }
+    to {
+        -moz-transform: rotateY(360deg);
+    }
+}
+@-ms-keyframes rotateOnY {
+    from {
+        -ms-transform: rotateY(0deg);
+    }
+    to {
+        -ms-transform: rotateY(360deg);
+    }
+}
+@keyframes rotateOnY {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}

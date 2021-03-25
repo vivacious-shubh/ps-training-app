@@ -1,0 +1,22 @@
+<div>
+    <div>
+        <div class="form-group">
+            <label>Enter Timer Limit</label>
+            <input type="text"
+                   class="form-control"
+                   name="timer"
+                   [(ngModel)]="timerLimitModel">
+        </div>
+        <div>
+            <button type="button" (click)="startPause()">Start/Pause</button>
+            <button type="button" (click)="reset()">Reset</button>
+        </div>
+        <div>
+            Timer: {{timerCurrentValue}}
+            Started: {{startCount}}
+            <ng-container *ngFor="let ev of pausedLogs">
+                <div><span>paused at {{ev}}</span></div>
+            </ng-container>
+        </div>
+    </div>
+</div>

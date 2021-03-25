@@ -1,0 +1,24 @@
+
+<div class="control-bar">
+    <div>
+        <input type="radio" id="grid" name="view" [value]="'grid'" [(ngModel)]="viewModel">
+        <label for="grid">Grid</label>
+        <input type="radio" id="list" name="view" [value]="'list'" [(ngModel)]="viewModel">
+        <label for="view">List</label><br>
+    </div>
+    <div>
+        <label for="filter">Price filter</label>
+        <select id="filter" [(ngModel)]="priceFilterModel" (ngModelChange)="onChange()">
+          <option value="">None</option>  
+          <option *ngFor="let val of filterValues" [value]="val">{{val}}</option>
+        </select>
+    </div>
+</div>
+<div class="product-container grid-view" [ngClass]="{'grid-view': viewModel == 'grid', 'list-view': viewModel == 'list'}">
+    <ng-container *ngFor="let product of filteredProducts">
+        <div class="product-card">
+            <h3>{{ product.name }}</h3>
+            <h4>Rs {{ product.price }}</h4>
+        </div>
+    </ng-container>
+</div>

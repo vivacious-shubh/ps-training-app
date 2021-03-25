@@ -1,0 +1,8 @@
+.flex-c {
+    display: flex;
+    flex-direction: row;
+}
+.flex-c > div {
+    width: 50%;
+    text-align: center;
+}
